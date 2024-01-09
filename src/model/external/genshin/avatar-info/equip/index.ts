@@ -1,6 +1,6 @@
-import { z } from 'zod';
-import { weaponSchema } from './weapon';
-import { reliquarySchema } from './reliquary';
+import { z } from "zod";
+import { weaponSchema } from "./weapon";
+import { reliquarySchema } from "./reliquary";
 
 export const equipSchema = z.union([weaponSchema, reliquarySchema]);
 
