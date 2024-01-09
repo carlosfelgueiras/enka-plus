@@ -1,12 +1,6 @@
 import { z } from "zod";
 import { resumedAvatarInfoSchema } from "./resumed-avatar";
-
-export const profilePictureSchema = z.object({
-  avatarId: z.number().min(0).optional(),
-  id: z.number().min(0).optional(),
-});
-
-export type ProfilePicture = z.infer<typeof profilePictureSchema>;
+import { profilePictureSchema } from "./profile-picture";
 
 export const playerInfoSchema = z.object({
   nickname: z.string(),
