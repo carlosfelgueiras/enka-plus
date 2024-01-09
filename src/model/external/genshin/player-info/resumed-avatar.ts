@@ -5,4 +5,4 @@ export const resumedAvatarInfoSchema = z.object({
     level: z.number().min(1).max(90),
 });
 
-export type resumedAvatarInfo = z.infer<typeof resumedAvatarInfoSchema>;
+export type ResumedAvatarInfo = z.infer<typeof resumedAvatarInfoSchema>;
