@@ -1,4 +1,4 @@
-import { propMapSchema } from "../../../../../src/model/external/genshin/avatar-info/prop-map";
+import { propMapSchema } from "../../../../../../src/model/external/genshin/avatar-info/prop-map";
 
 test("standard behaviour parsing", () => {
   const data = {
