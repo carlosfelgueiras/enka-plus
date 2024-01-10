@@ -24,17 +24,3 @@ export const propIdSchema = z.enum([
 ]);
 
 export type PropId = z.infer<typeof propIdSchema>;
-
-export const appendPropSchema = z.object({
-  appendPropId: propIdSchema,
-  statValue: z.number().min(0),
-});
-
-export type AppendProp = z.infer<typeof appendPropSchema>;
-
-export const mainPropSchema = z.object({
-  mainPropId: propIdSchema,
-  statValue: z.number().min(0),
-});
-
-export type MainProp = z.infer<typeof mainPropSchema>;
