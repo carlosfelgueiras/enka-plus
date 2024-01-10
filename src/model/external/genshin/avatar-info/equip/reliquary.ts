@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { mainPropSchema, appendPropSchema } from "./prop";
+import { propSchema } from "./prop";
 
 export const reliquarySchema = z.object({
   itemId: z.number().min(0),
@@ -21,8 +21,8 @@ export const reliquarySchema = z.object({
       "EQUIP_DRESS",
     ]),
     setNameTextMapHash: z.string().min(1),
-    reliquarySubstats: z.array(appendPropSchema).min(1).max(4),
-    reliquaryMainstat: mainPropSchema,
+    reliquarySubstats: z.array(propSchema).min(1).max(4),
+    reliquaryMainstat: propSchema,
   }),
 });
 
