@@ -9,7 +9,7 @@ export const avatarInfoSchema = z.object({
   propMap: propMapSchema,
   fightPropMap: fightPropMapScema,
   skillDepotId: z.number().min(0),
-  inherentProudSkillList: z.array(z.number().min(0)).max(3),
+  inherentProudSkillList: z.array(z.number().min(0)).max(4),
   skillLevelMap: z.record(z.string().min(5), z.number().min(1).max(15)),
   equipList: z.array(equipSchema).max(6),
   fetterInfo: fetterInfoSchema,
