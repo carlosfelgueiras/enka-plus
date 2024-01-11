@@ -8,12 +8,17 @@ export class GenshinProfile {
   public characterInfo: Array<Character> = new Array<Character>();
   public ttl: number;
 
-  constructor(profile: GenshinProfileExternal) {
+  constructor(
+    profile: GenshinProfileExternal,
+    translator: (key: string) => string = (key) => key,
+  ) {
     this.ttl = profile.ttl;
     this.uid = profile.uid;
+
     this.playerInfo = new PlayerInfo(profile.playerInfo);
+
     profile.avatarInfoList.forEach((avatarInfo) => {
-      this.characterInfo.push(new Character(avatarInfo));
+      this.characterInfo.push(new Character(avatarInfo, translator));
     });
   }
 }

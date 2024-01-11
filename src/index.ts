@@ -3,6 +3,7 @@ import {
   GenshinProfile as GenshinProfileExternal,
 } from "./model/external/genshin";
 import { GenshinProfile } from "./model/internal/genshin";
+import { translate } from "./localization";
 
 const result = await fetch("https://enka.network/api/uid/747552694", {
   method: "GET",
@@ -16,6 +17,8 @@ const json = await result.json();
 
 const playerInfo: GenshinProfileExternal = genshinProfileSchema.parse(json);
 
-const genshinProfile = new GenshinProfile(playerInfo);
+const genshinProfile = new GenshinProfile(playerInfo, (key) =>
+  translate(key, "pt"),
+);
 
 console.log(genshinProfile);
