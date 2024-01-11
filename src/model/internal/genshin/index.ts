@@ -3,10 +3,10 @@ import { Character } from "./character";
 import { PlayerInfo } from "./player-info";
 
 export class GenshinProfile {
+  public ttl: number;
   public uid: string;
   public playerInfo: PlayerInfo;
-  public characterInfo: Array<Character> = new Array<Character>();
-  public ttl: number;
+  public characterInfo: Array<Character>;
 
   constructor(
     profile: GenshinProfileExternal,
@@ -17,6 +17,7 @@ export class GenshinProfile {
 
     this.playerInfo = new PlayerInfo(profile.playerInfo);
 
+    this.characterInfo = new Array<Character>();
     profile.avatarInfoList.forEach((avatarInfo) => {
       this.characterInfo.push(new Character(avatarInfo, translator));
     });
