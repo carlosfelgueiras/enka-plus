@@ -6,8 +6,11 @@ export class Character {
   public ascension: number;
   public constellation: number;
 
-  constructor(info: AvatarInfoExternal) {
-    this.name = info.avatarId.toString();
+  constructor(
+    info: AvatarInfoExternal,
+    translator: (key: string) => string = (key) => key,
+  ) {
+    this.name = translator(info.avatarId.toString());
     this.level = info.propMap["4001"] ? parseInt(info.propMap["4001"].val) : 0;
     this.ascension = info.propMap["4001"]
       ? parseInt(info.propMap["4001"].val)
