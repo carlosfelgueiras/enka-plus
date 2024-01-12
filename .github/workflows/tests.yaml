@@ -1,6 +1,6 @@
 name: Test Running
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   test:
@@ -10,5 +10,5 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: "20.x"
-      - run: npm ci
+      - run: npm install
       - run: npm test

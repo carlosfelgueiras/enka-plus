@@ -1,4 +1,3 @@
-import { test, expect } from "vitest";
 import { weaponSchema } from "../../../../../../src/model/external/genshin/avatar-info/equip/weapon";
 
 test("standard behaviour parsing", () => {

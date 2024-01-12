@@ -1,4 +1,3 @@
-import { test, expect } from "vitest";
 import { propIdSchema } from "../../../../../../../src/model/external/genshin/avatar-info/equip/prop/prop-id";
 
 test("valid value", () => {

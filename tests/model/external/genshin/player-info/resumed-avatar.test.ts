@@ -1,4 +1,3 @@
-import { test, expect } from "vitest";
 import { resumedAvatarInfoSchema } from "../../../../../src/model/external/genshin/player-info/resumed-avatar";
 
 test("standard behaviour parsing", () => {
