@@ -13,10 +13,6 @@ const percentageStatNames = [
 ];
 
 export function translate(key: string, lang: string = "en") {
-  if(!(lang in translationDictionary)){
-    throw new Error(`Language ${lang} not available`)
-  }
-
   if (!characterDictionary[key]) {
     const translation = translationDictionary[lang][key];
 
