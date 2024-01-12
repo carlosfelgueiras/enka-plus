@@ -1,3 +1,4 @@
+import { test, expect } from "vitest";
 import { flatSchema } from "../../../../../../src/model/external/genshin/avatar-info/equip/flat";
 
 test("default parsing behaviour for weapon", () => {
