@@ -1,4 +1,3 @@
-import { test, expect } from "vitest";
 import { propSchema } from "../../../../../../../src/model/external/genshin/avatar-info/equip/prop";
 
 test("standard behaviour parsing", () => {
