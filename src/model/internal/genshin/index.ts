@@ -18,8 +18,11 @@ export class GenshinProfile {
     this.playerInfo = new PlayerInfo(profile.playerInfo);
 
     this.characterInfo = new Array<Character>();
-    profile.avatarInfoList.forEach((avatarInfo) => {
-      this.characterInfo.push(new Character(avatarInfo, translator));
-    });
+
+    if (profile.avatarInfoList) {
+      profile.avatarInfoList.forEach((avatarInfo) => {
+        this.characterInfo.push(new Character(avatarInfo, translator));
+      });
+    }
   }
 }
