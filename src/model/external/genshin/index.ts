@@ -4,7 +4,7 @@ import { avatarInfoSchema } from "./avatar-info";
 
 export const genshinProfileSchema = z.object({
   playerInfo: playerInfoSchema,
-  avatarInfoList: z.array(avatarInfoSchema).max(8),
+  avatarInfoList: z.array(avatarInfoSchema).max(8).optional(),
   ttl: z.number().min(0),
   uid: z.string().min(9).max(9),
 });
