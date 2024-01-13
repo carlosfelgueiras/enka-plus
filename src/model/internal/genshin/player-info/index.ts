@@ -5,9 +5,9 @@ export class PlayerInfo {
   username: string;
   level: number;
   signature: string;
-  worldLevel: number;
+  worldLevel?: number;
   achievementNumber: number;
-  abyssInfo: AbyssInfo;
+  abyssInfo?: AbyssInfo;
 
   constructor(playerInfo: PlayerInfoExternal) {
     this.username = playerInfo.nickname;
@@ -15,9 +15,14 @@ export class PlayerInfo {
     this.signature = playerInfo.signature || "";
     this.worldLevel = playerInfo.worldLevel;
     this.achievementNumber = playerInfo.finishAchievementNum;
-    this.abyssInfo = new AbyssInfo(
-      playerInfo.towerFloorIndex,
-      playerInfo.towerLevelIndex,
-    );
+    if (
+      playerInfo.towerFloorIndex !== undefined &&
+      playerInfo.towerLevelIndex !== undefined
+    ) {
+      this.abyssInfo = new AbyssInfo(
+        playerInfo.towerFloorIndex,
+        playerInfo.towerLevelIndex,
+      );
+    }
   }
 }

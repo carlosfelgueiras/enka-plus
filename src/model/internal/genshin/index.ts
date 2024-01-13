@@ -6,7 +6,7 @@ export class GenshinProfile {
   public ttl: number;
   public uid: string;
   public playerInfo: PlayerInfo;
-  public characterInfo: Array<Character>;
+  public characterInfo?: Array<Character>; // Optional
 
   constructor(
     profile: GenshinProfileExternal,
@@ -17,11 +17,16 @@ export class GenshinProfile {
 
     this.playerInfo = new PlayerInfo(profile.playerInfo);
 
-    this.characterInfo = new Array<Character>();
+    if (
+      profile.avatarInfoList !== undefined &&
+      profile.avatarInfoList.length > 0
+    ) {
+      this.characterInfo = new Array<Character>();
 
-    if (profile.avatarInfoList) {
       profile.avatarInfoList.forEach((avatarInfo) => {
-        this.characterInfo.push(new Character(avatarInfo, translator));
+        if (this.characterInfo !== undefined) {
+          this.characterInfo.push(new Character(avatarInfo, translator));
+        }
       });
     }
   }
