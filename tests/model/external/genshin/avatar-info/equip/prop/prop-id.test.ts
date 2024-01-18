@@ -1,5 +1,5 @@
 import { test, expect } from "vitest";
-import { propIdSchema } from "../../../../../../../src/model/external/genshin/avatar-info/equip/prop/prop-id";
+import { propIdSchema } from "src/model/external/genshin/avatar-info/equip/prop/prop-id";
 
 test("valid value", () => {
   const propId = propIdSchema.parse("FIGHT_PROP_BASE_ATTACK");

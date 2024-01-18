@@ -1,5 +1,5 @@
 import { test, expect } from "vitest";
-import { genshinProfileSchema } from "../../../../src/model/external/genshin";
+import { genshinProfileSchema } from "src/model/external/genshin";
 
 test("standard behavior parsing", () => {
   // TODO: add more tests

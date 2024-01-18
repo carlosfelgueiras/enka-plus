@@ -1,5 +1,5 @@
 import { test, expect } from "vitest";
-import { translate } from "../../src/localization/index";
+import { translate } from "src/localization/index";
 
 test("standard behaviour id translation", () => {
   const input = {

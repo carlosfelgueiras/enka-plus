@@ -1,8 +1,8 @@
 import { test, expect } from "vitest";
-import { equipSchema } from "../../../../../../src/model/external/genshin/avatar-info/equip";
-import { reliquarySchema } from "../../../../../../src/model/external/genshin/avatar-info/equip/reliquary";
-import { weaponSchema } from "../../../../../../src/model/external/genshin/avatar-info/equip/weapon";
-import { flatSchema } from "../../../../../../src/model/external/genshin/avatar-info/equip/flat";
+import { equipSchema } from "src/model/external/genshin/avatar-info/equip";
+import { reliquarySchema } from "src/model/external/genshin/avatar-info/equip/reliquary";
+import { weaponSchema } from "src/model/external/genshin/avatar-info/equip/weapon";
+import { flatSchema } from "src/model/external/genshin/avatar-info/equip/flat";
 
 const reliquaryData = reliquarySchema.parse({
   level: 20,

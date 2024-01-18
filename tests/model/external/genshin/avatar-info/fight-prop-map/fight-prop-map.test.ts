@@ -1,5 +1,5 @@
 import { test, expect } from "vitest";
-import { fightPropMapScema } from "../../../../../../src/model/external/genshin/avatar-info/fight-prop-map";
+import { fightPropMapScema } from "src/model/external/genshin/avatar-info/fight-prop-map";
 
 test("standard behaviour parsing", () => {
   const data = {
