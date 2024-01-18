@@ -1,5 +1,5 @@
 import { test, expect } from "vitest";
-import { fetterInfoSchema } from "../../../../../src/model/external/genshin/avatar-info/fetter-info";
+import { fetterInfoSchema } from "src/model/external/genshin/avatar-info/fetter-info";
 
 test("standard behaviour parsing", () => {
   const input = {

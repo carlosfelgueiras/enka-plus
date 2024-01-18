@@ -1,5 +1,5 @@
 import { test, expect } from "vitest";
-import { reliquarySchema } from "../../../../../../src/model/external/genshin/avatar-info/equip/reliquary";
+import { reliquarySchema } from "src/model/external/genshin/avatar-info/equip/reliquary";
 
 test("standard behaviour parsing", () => {
   const data = {

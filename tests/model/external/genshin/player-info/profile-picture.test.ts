@@ -1,5 +1,5 @@
 import { test, expect } from "vitest";
-import { profilePictureSchema } from "../../../../../src/model/external/genshin/player-info/profile-picture";
+import { profilePictureSchema } from "src/model/external/genshin/player-info/profile-picture";
 
 test("standard behaviour parsing", () => {
   const input = {
